@@ -1,0 +1,110 @@
+*{
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+body{
+  text-align: center;
+}
+
+h2{
+  padding: 40px 50px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.row{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.todo{
+  background: #b2adad;
+  width: 50vw;
+  margin-left: 25vw;
+  height: 70vh;
+  border-radius: 20px;
+}
+
+input{
+  flex: 1;
+  outline: none;
+  margin: none;
+  background-color: #EAE2B7;
+  padding: 5px 8px;
+  font-size: 16px;
+  justify-content: space-between;
+  border-radius: 40px;
+}
+
+button{
+  outline: none;
+  margin: none;
+  background: #FBB13C;
+  padding: 5px 8px;
+  font-size: 16px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+
+
+ul li{
+  list-style: none;
+  text-align:left;
+  padding: 0px 40px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+}
+
+ul li.checked{
+  text-decoration: line-through;
+}
+
+ul li.checked::before{
+  background-image: url(images/checked.png);
+  background-size: cover;
+  background-position: center;
+}
+
+ul li::before{
+  content: '';
+  height: 20px;
+  width: 20px;
+  border-radius: 50;
+  position: absolute;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 0px;
+  left: 10px;
+}
+
+ul li span{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  text-align: center;
+  color: #555;
+  border-radius: 50%;
+  line-height: 20px;
+  right: 32px;
+}
+ul li span:hover{
+  background: #edeef0;
+}
+
+.container{
+  padding: 30px 30px;
+  height: 100vh;
+  max-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+}
